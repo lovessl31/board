@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electron UI</title>
+   <!-- Pretendard Font -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+</head>
+
+<body>
+    <div id="content5" class="custom-scroll recent-default dynemic-sidebar">
+           <div id="setting_menu" class="setting_menu">
+        <div class="setting_menu_wrap">
+          <label class="setting_item">
+            <div class="d-flex align-items-center">
+              <span class="d-flex align-items-center"></span>
+              <p>목록형</p>
+            </div>
+            <input class="form-check-input" type="radio" name="viewType" value="list">
+          </label>
+          <label class="setting_item">
+            <div class="d-flex align-items-center">
+              <span class="d-flex align-items-center"></span>
+              <p>피드형</p>
+            </div>
+            <input class="form-check-input" type="radio" name="viewType" value="feed">
+          </label>
+          <label class="setting_item">
+            <div class="d-flex align-items-center">
+              <span class="d-flex align-items-center justify-content-center"></span>
+              <p>앨범형</p>
+            </div>
+            <input class="form-check-input" type="radio" name="viewType" value="album">
+          </label>
+        </div>
+      </div>
+      <div id="side_menu_overlay" class="overlay"></div> <!-- 검정색 투명 오버레이 -->
+      <div id="side_menu" class="side-menu">
+        <div class="side_menu_wrap">
+          <div class="side_m_title">
+            <h4>게시판</h4>
+          </div>
+          <hr>
+          <div class="board_list_wrap">
+            <!-- <div class="board_item">
+              <div class="cate_tit"><h2>TO_DO</h2></div>
+              <ul class="board_list">
+                <li><span></span>개발</li>
+                <li><span></span>마케팅</li>
+                <li><span></span>경연지원</li>
+              </ul>
+            </div>
+            <hr class="board_section">
+            <div class="board_item">
+              <div class="cate_tit"><h2>위드퍼스트</h2></div>
+              <ul class="board_list">
+                <li><span></span><a href="#">공지사항</a></li>
+                <li><span></span>활동보고서</li>
+                <li><span></span>디자인</li>
+                <li><span></span>사업계획서</li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </div>
+ 
+        <div class="recent">
+          <div class="write_top bluebg">
+              <div class="write_btn">
+                <div class="d-flex">
+                    <div class="back_img"></div>
+                    <h3>글쓰기</h3>
+                </div>
+                <button>등록</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="side_menu_overlay" class="overlay"></div>
+        <div class="board_select_menu">
+            <div class="board_m_title">
+                <h4>게시판 선택</h4>
+            </div>
+            <hr class="select_section">
+            <div class="select_list_wrap">
+                <div class="select_list_item">
+                    <div class="cate_s_tit"><h2>TO_DO</h2></div>
+                    <ul>
+                        <li>
+                            <label class="b_select_item d-flex align-items-center">
+                                <div>
+                                    <span class="d-flex align-items-center"></span>
+                                    <p class="mb-0">개발</p>
+                                </div>
+                                <input class="form-check-input ml-auto" type="radio" name="todoType" value="dev">
+                            </label>
+                        </li>
+                        <li>
+                            <label class="b_select_item d-flex align-items-center">
+                                <div>
+                                    <span class="d-flex align-items-center"></span>
+                                    <p class="mb-0">JOB_디자인</p>
+                                </div>
+                                <input class="form-check-input ml-auto" type="radio" name="todoType" value="dev">
+                            </label>
+                        </li>
+                        <li>
+                            <label class="b_select_item d-flex align-items-center">
+                                <div>
+                                    <span class="d-flex align-items-center"></span>
+                                    <p class="mb-0">마케팅</p>
+                                </div>
+                                <input class="form-check-input ml-auto" type="radio" name="todoType" value="dev">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="select_list_item">
+                    <div class="cate_s_tit"><h2>위드퍼스트</h2></div>
+                    <ul>
+                        <li>
+                            <label class="b_select_item d-flex align-items-center">
+                                <div>
+                                    <span class="d-flex align-items-center"></span>
+                                    <p class="mb-0">공지사항</p>
+                                </div>
+                                <input class="form-check-input ml-auto" type="radio" name="todoType" value="dev">
+                            </label>
+                        </li>
+                        <li>
+                            <label class="b_select_item d-flex align-items-center">
+                                <div>
+                                    <span class="d-flex align-items-center"></span>
+                                    <p class="mb-0">활동보고서</p>
+                                </div>
+                                <input class="form-check-input ml-auto" type="radio" name="todoType" value="dev">
+                            </label>
+                        </li>
+                        <li>
+                            <label class="b_select_item d-flex align-items-center">
+                                <div>
+                                    <span class="d-flex align-items-center"></span>
+                                    <p class="mb-0">디자인</p>
+                                </div>
+                                <input class="form-check-input ml-auto" type="radio" name="todoType" value="dev">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        </div>
+
+        <div class="board_select_wrap">
+            <div class="board_select">
+                <h3>게시판 선택</h3>
+                <button>></button>
+            </div>
+            <div class="write_title">
+                <input type="text" placeholder="제목">
+                <div class="form-check notice_check">
+                    <input type="checkbox" class="form-check-input" id="noticeCheck">
+                    <label class="form-check-label" for="noticeCheck">공지로 등록</label>
+                </div>
+            </div>
+
+            <div class="editor">
+
+            </div>
+
+            <div class="module-wrap">
+                <div class="row module">
+                    <div class="col-3 font-weight">상태</div>
+                    <div class="col-9">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="row module">
+                    <div class="col-3 font-weight">과일</div>
+                    <div class="col-9">
+                        <select>
+                            <option>딸기</option>
+                            <option>바나나</option>
+                            <option>포도</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row module">
+                    <div class="col-3 font-weight">시작시간</div>
+                    <div class="col-9"><input type="date"></div>
+                </div>
+                <div class="row module">
+                    <div class="col-3 font-weight">마감시간</div>
+                    <div class="col-9"><input type="date"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+       
+        <div class="footer_wrap">
+          <div class="footer"></div>
+        </div>
+
+
+      </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electron UI</title>
+   <!-- Pretendard Font -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+</head>
+<body>
+  <div id="content5" class="custom-scroll recent-default dynemic-sidebar">
+    <!-- 뷰 선택 메뉴 (리스트형, 피드형, 앨범형)-->
+     <div id="setting_menu" class="setting_menu">
+      <div class="setting_menu_wrap">
+        <label class="setting_item">
+          <div class="d-flex align-items-center">
+            <span class="d-flex align-items-center"></span>
+            <p>목록형</p>
+          </div>
+          <input class="form-check-input" type="radio" name="viewType" value="list" checked>
+        </label>
+        
+        <label class="setting_item">
+          <div class="d-flex align-items-center">
+            <span class="d-flex align-items-center"></span>
+            <p>피드형</p>
+          </div>
+          <input class="form-check-input" type="radio" name="viewType" value="feed">
+        </label>
+        
+        <label class="setting_item">
+          <div class="d-flex align-items-center">
+            <span class="d-flex align-items-center justify-content-center"></span>
+            <p>앨범형</p>
+          </div>
+          <input class="form-check-input" type="radio" name="viewType" value="album">
+        </label>
+      </div>
+    </div>
+    
+    <!-- 검정색 투명 오버레이 -->
+    <div id="side_menu_overlay" class="overlay"></div>
+    
+    <!-- 사이드 게시판 네비게이션 -->
+    <div id="side_menu" class="side-menu">
+      <div class="side_menu_wrap">
+        <div class="side_m_title">
+          <h4>게시판</h4>
+        </div>
+        <hr>
+        <div class="board_list_wrap">
+            <!-- <div class="board_item">
+              <div class="cate_tit"><h2>TO_DO</h2></div>
+              <ul class="board_list">
+                <li><span></span>개발</li>
+                <li><span></span>마케팅</li>
+                <li><span></span>경연지원</li>
+              </ul>
+            </div>
+            <hr class="board_section">
+            <div class="board_item">
+              <div class="cate_tit"><h2>위드퍼스트</h2></div>
+              <ul class="board_list">
+                <li><span></span><a href="#">공지사항</a></li>
+                <li><span></span>활동보고서</li>
+                <li><span></span>디자인</li>
+                <li><span></span>사업계획서</li>
+              </ul>
+            </div> -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="recent">
+      <div class="top_title">
+        <div id="board_side_menu"></div>
+        <h3>Board</h3>
+        <span>게시판</span>
+      </div>
+    </div>
+    
+    <!-- 상단 게시글 리스트 메뉴 탭 -->
+    <div class="menu_tap_wrap">
+      <div>
+        <button class="menu_tap tap_selected">전체</button>
+        <button class="menu_tap">인기</button>
+      </div>
+      <div>
+        <button id="view_setting" class="board_view"></button>
+      </div>
+    </div>
+    
+    <!-- 보기 설정에 따른 리스트 뷰-->
+    <div id="content_view"></div>
+
+    <!-- <div class="list_item">
+          <div>
+            <div class="left_list">
+              <div class="image_preview"></div>
+              <div class="content_preview">
+                <h3><a href="#">메신저 기능 개발 완료</a></h3>
+                <ul> 
+                  <li>송수련</li>
+                  <li>2024.08.26</li>
+                  <li>조회 58</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="right_list">
+            <button>
+              <p>10</p>
+              <span>댓글</span>
+            </button>
+          </div>
+        </div>
+         -->
+
+        <!-- <div class="feed_item">
+          <div class="feed_tit">
+            <p>송수련</p>
+            <span>2024.08.26</span>
+          </div>
+          <div class="feed_content">
+            <h3>안녕하세요. 저희 개 자랑</h3>
+            <div class="content_wrap">
+              <p>말티즈는 귀엽다. 왜냐면 검정콩 3개가 일단 미친듯이 귀엽고, 부시시한 털도 너무 귀엽다. 그리고 치와와도 귀엽다. 치와와는 개 품종 중 가장 작은 크기이다.</p>
+            </div>
+          </div>
+          <div class="feed_img_wrap"></div>
+          <div class="feed_bottom">
+            <div class="d-flex align-items-center">
+              <div class="mright d-flex align-items-center">
+                <button class="heart d-flex align-items-center"></button>
+                <button>12</button>
+              </div>
+              <div class="d-flex align-items-center">
+                <button class="cmt d-flex align-items-center"></button>
+                <button>5</button>
+              </div>
+            </div>
+            <span>조회 99</span>
+          </div>
+        </div> -->
+
+
+        <!-- <div class="album_container">
+          <div class="album_item">
+            <div class="album_img"></div>
+            <div class="album_content">
+              <h3><a href="detail.html">구경하실 분 있나요</a></h3>
+              <p>장원영</p>
+              <div class="album_bottom">
+                <span>2024.08.26</span>
+                <button>5</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+    
+
+
+    <!-- 하단에 떠있는 글쓰기 팝업 -->
+    <div class="write_pop">
+      <button></button>
+    </div>
+    
+        <div class="footer_wrap">
+          <div class="footer"></div>
+        </div>
+      </div>
+</body>
+</html>
