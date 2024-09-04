@@ -1,0 +1,108 @@
+{
+    "data": [
+      {
+        "post_idx": 1,
+        "post_title": "바다 좋아하는사람만",
+        "board_idx": 1,
+        "board_name": "공지사항",
+        "comment_count": 12,
+        "like_count": 10,
+        "liked_by_user": "y",
+        "post_content": "바다 예쁨",
+        "user_name": "최고 관리자",
+        "created_at": "2024-09-02 14:16:52",
+        "views": 102,
+        "attachments": [
+          {
+            "domain": "192.168.0.18:28888/imageView/1",
+            "file_name": "바다.jpg",
+            "file_id": 1,
+            "file_type": "image/jpeg",
+            "extension": "jpg"
+          }
+        ]
+      },
+      {
+        "post_idx": 2,
+        "post_title": "산 좋아하는사람만",
+        "board_idx": 1,
+        "board_name": "공지사항",
+        "comment_count": 11,
+        "like_count": 145,
+        "liked_by_user": "y",
+        "post_content": "산 힘듬",
+        "user_name": "어드민2",
+        "created_at": "2024-09-02 14:16:52",
+        "views": 2045,
+        "attachments": [
+          {
+            "domain": "192.168.0.18:28888/imageView/2",
+            "file_name": "산.jpg",
+            "file_id": 2,
+            "file_type": "image/jpeg",
+            "extension": "jpg"
+          }
+        ]
+      },
+      {
+        "post_idx": 3,
+        "post_title": "도시의 밤",
+        "board_idx": 1,
+        "board_name": "공지사항",
+        "comment_count": 8,
+        "like_count": 99,
+        "liked_by_user": "n",
+        "post_content": "도시의 밤은 참 아름답다.",
+        "user_name": "홍길동",
+        "created_at": "2024-08-30 10:45:00",
+        "views": 500,
+        "attachments": []
+      },
+      {
+        "post_idx": 4,
+        "post_title": "오늘의 회의록",
+        "board_idx": 4,
+        "board_name": "회의록",
+        "comment_count": 5,
+        "like_count": 50,
+        "liked_by_user": "y",
+        "post_content": "오늘 회의에서 결정된 사항들입니다.",
+        "user_name": "박수영",
+        "created_at": "2024-08-28 09:00:00",
+        "views": 300,
+        "attachments": [
+          {
+            "domain": "192.168.0.18:28888/documentView/3",
+            "file_name": "회의록.pdf",
+            "file_id": 3,
+            "file_type": "application/pdf",
+            "extension": "pdf"
+          }
+        ]
+      },
+      {
+        "post_idx": 5,
+        "post_title": "새로운 프로젝트 시작",
+        "board_idx": 5,
+        "board_name": "진행 상황",
+        "comment_count": 20,
+        "like_count": 200,
+        "liked_by_user": "y",
+        "post_content": "새로운 프로젝트를 시작합니다. 모두 힘냅시다!",
+        "user_name": "김철수",
+        "created_at": "2024-08-27 15:30:00",
+        "views": 1500,
+        "attachments": [
+          {
+            "domain": "192.168.0.18:28888/imageView/4",
+            "file_name": "프로젝트.png",
+            "file_id": 4,
+            "file_type": "image/png",
+            "extension": "png"
+          }
+        ]
+      }
+    ],
+    "result": "success",
+    "status_code": 200
+  }

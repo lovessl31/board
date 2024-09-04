@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // HtmlWebpackPlugin 불러오기
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
@@ -43,6 +44,11 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      'jQuery': 'jquery', // 모든 'jQuery' 참조를 'jquery'로 해결
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
@@ -64,13 +70,18 @@ module.exports = {
       filename: 'write.html',
       chunks: ['write'],
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
   ],
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'dist'),
+      directory: path.resolve(__dirname, 'public'),
     },
     compress: true,
-    port: 9005,
+    port: 9004,
     open: true,
   },
 };

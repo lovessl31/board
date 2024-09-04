@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "cm_content": "댓글입니다",
+            "cm_idx": 1,
+            "created_date": "2024-09-03 09:08:56",
+            "del_yn": "N",
+            "depth": 1,
+            "post_idx": 1,
+            "update_date": "2024-09-03 09:08:56",
+            "user_idx": "2",
+            "user_name": "최고 관리자",
+            "attachments": [
+                {
+                    "domain": "http://localhost.com/download/23458",
+                    "f_ext": "png",
+                    "f_idx": 2,
+                    "f_size": "7.83 KB",
+                    "f_type": "image/png",
+                    "o_f_name": "po2.PNG"
+                }
+            ],
+            "reply_comment": []
+        },
+        {
+            "cm_content": "댓글3",
+            "cm_idx": 2,
+            "created_date": "2024-09-03 09:09:23",
+            "del_yn": "N",
+            "depth": 1,
+            "post_idx": 1,
+            "update_date": "2024-09-03 09:09:23",
+            "user_idx": "2",
+            "user_name": "최고 관리자",
+            "attachments": [
+                {
+                    "domain": "http://localhost.com/download/23459",
+                    "f_ext": "png",
+                    "f_idx": 3,
+                    "f_size": "7.83 KB",
+                    "f_type": "image/png",
+                    "o_f_name": "po3.PNG"
+                }
+            ],
+            "reply_comment": [
+                {
+                    "created_date": "2024-09-03 09:13:48",
+                    "del_yn": "N",
+                    "depth": 2,
+                    "rp_content": "대댓글 달아본다.",
+                    "rp_g_idx": 1,
+                    "rp_idx": 1,
+                    "rp_p_idx": 1,
+                    "update_date": "2024-09-03 09:13:48",
+                    "user_idx": "2",
+                    "user_name": "웩누구니",
+                    "attachments": [
+                        {
+                            "domain": "http://localhost.com/download/23460",
+                            "f_ext": "jpg",
+                            "f_idx": 4,
+                            "f_size": "340.36 KB",
+                            "f_type": "image/jpeg",
+                            "o_f_name": "KakaoTalk_20240507_154645455_01.jpg"
+                        }
+                    ],
+                    "reply_comment": []
+                }
+            ]
+        }
+    ],
+    "result": "success",
+    "status_code": 200
+}

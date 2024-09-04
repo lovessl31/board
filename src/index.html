@@ -45,7 +45,7 @@
     <div id="side_menu" class="side-menu">
       <div class="side_menu_wrap">
         <div class="side_m_title">
-          <h4>게시판</h4>
+          <h4><a href="index.html">게시판</a></h4>
         </div>
         <hr>
         <div class="board_list_wrap">
@@ -82,8 +82,9 @@
     <!-- 상단 게시글 리스트 메뉴 탭 -->
     <div class="menu_tap_wrap">
       <div>
-        <button class="menu_tap tap_selected">전체</button>
-        <button class="menu_tap">인기</button>
+        <button id="all_tab" class="menu_tap tap_selected">전체</button>
+        <button id="pop_tab" class="menu_tap">인기</button>
+        <button id="notice_tab" style="display: none;" class="menu_tap">공지</button>
       </div>
       <div>
         <button id="view_setting" class="board_view"></button>
@@ -158,8 +159,6 @@
           </div>
         </div> -->
     
-
-
     <!-- 하단에 떠있는 글쓰기 팝업 -->
     <div class="write_pop">
       <button></button>

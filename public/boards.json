@@ -1,0 +1,108 @@
+{
+  "data": [
+    {
+      "cate_idx": 1,
+      "cate_name": "게시판",
+      "s_depth": 1,
+      "sub_category": [
+        {
+          "s_c_idx": 1,
+          "s_cate_name": "TO_DO",
+          "s_depth": 2,
+          "s_g_c_idx": 1,
+          "s_p_c_idx": 1,
+          "sub_category": [],
+          "board": [
+            {
+              "board_idx": 1,
+              "board_name": "공지사항"
+            },
+            {
+              "board_idx": 2,
+              "board_name": "개발"
+            },
+            {
+              "board_idx": 3,
+              "board_name": "마케팅"
+            }
+          ]
+        },
+        {
+          "s_c_idx": 2,
+          "s_cate_name": "프로젝트 관리",
+          "s_depth": 2,
+          "s_g_c_idx": 1,
+          "s_p_c_idx": 1,
+          "sub_category": [],
+          "board": [
+            {
+              "board_idx": 4,
+              "board_name": "진행 상황"
+            },
+            {
+              "board_idx": 5,
+              "board_name": "문서 공유"
+            },
+            {
+              "board_idx": 6,
+              "board_name": "회의록"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cate_idx": 2,
+      "cate_name": "사내 공지",
+      "s_depth": 1,
+      "sub_category": [
+        {
+          "s_c_idx": 3,
+          "s_cate_name": "공지사항",
+          "s_depth": 2,
+          "s_g_c_idx": 2,
+          "s_p_c_idx": 2,
+          "sub_category": [],
+          "board": [
+            {
+              "board_idx": 7,
+              "board_name": "HR 공지"
+            },
+            {
+              "board_idx": 8,
+              "board_name": "복지 정책"
+            },
+            {
+              "board_idx": 9,
+              "board_name": "보안 공지"
+            }
+          ]
+        },
+        {
+          "s_c_idx": 4,
+          "s_cate_name": "사내 이벤트",
+          "s_depth": 2,
+          "s_g_c_idx": 2,
+          "s_p_c_idx": 2,
+          "sub_category": [],
+          "board": [
+            {
+              "board_idx": 10,
+              "board_name": "연말 파티"
+            },
+            {
+              "board_idx": 11,
+              "board_name": "워크숍"
+            },
+            {
+              "board_idx": 12,
+              "board_name": "체육 대회"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "result": "success",
+  "status_code": 200
+}
