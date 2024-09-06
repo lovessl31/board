@@ -9,6 +9,8 @@ module.exports = {
     detail: './src/detail.js', // detail.js 엔트리
     cmt: './src/cmt.js',
     write: './src/write.js',
+    login: './src/login.js',
+    company: './src/company.js',
   },
   output: {
     filename: '[name].bundle.js', // 각 엔트리의 이름으로 파일 생성
@@ -53,12 +55,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
-      chunks: ['index'], // index.js만 포함
+      chunks: ['index', 'login'],
     }),
     new HtmlWebpackPlugin({
       template: './src/detail.html',
       filename: 'detail.html',
-      chunks: ['detail'], // detail.js만 포함
+      chunks: ['detail'], 
     }),
     new HtmlWebpackPlugin({
       template: './src/cmt.html',
@@ -69,6 +71,11 @@ module.exports = {
       template: './src/write.html',
       filename: 'write.html',
       chunks: ['write'],
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/company.html',
+      filename: 'company.html',
+      chunks: ['company'],
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -81,7 +88,8 @@ module.exports = {
       directory: path.resolve(__dirname, 'public'),
     },
     compress: true,
-    port: 9004,
+    port: 9001,
     open: true,
+    hot: false,
   },
 };

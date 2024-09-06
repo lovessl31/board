@@ -1,0 +1,36 @@
+{
+    "data": [
+      {
+        "df_idx": 1,
+        "df_name": "상태",
+        "df_type": "dataInput",
+        "required": "Y",
+        "is_common": "N",
+        "extra_data": null,
+        "value": "정상"
+      },
+      {
+        "df_idx": 2,
+        "df_name": "시작일자",
+        "df_type": "dateInput",
+        "required": "Y",
+        "is_common": "N",
+        "extra_data": null,
+        "value": "2024-01-01"
+      },
+      {
+        "df_idx": 3,
+        "df_name": "컴퓨터 부품",
+        "df_type": "dropdown",
+        "required": "N",
+        "is_common": "N",
+        "extra_data": {
+          "options": ["cpu", "gpu", "mb", "ram", "ssd", "case", "power", "cool"]
+        },
+        "value": "gpu"
+      }
+    ],
+    "result": "success",
+    "status_code": 200
+  }
+  

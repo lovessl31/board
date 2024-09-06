@@ -69,7 +69,7 @@
       <div class="write_top bluebg">
         <div class="write_btn">
           <div class="d-flex">
-            <div class="back_img"></div>
+            <div id="back_Btn" class="back_img"></div>
             <h3>글쓰기</h3>
           </div>
           <button>등록</button>
@@ -153,7 +153,7 @@
     
     <div class="board_select_wrap">
       <div class="board_select">
-        <h3>마케팅</h3>
+        <h3 id="boardTitle"></h3>
         <div class="form-check notice_check">
           <input type="checkbox" id="noticeCheck">
           <label for="noticeCheck">공지로 등록</label>
@@ -167,10 +167,11 @@
       <div class="file_attach_wrap">
         <div class="file_attach_btn">
           <div>
-            <button>파일첨부</button>
-            <button style="display: none;">전체삭제</button>
+            <input type="file" id="fileInput" multiple style="display: none;" />
+            <button id="fileBtn">파일첨부</button>
+            <button id="deleteAllBtn" style="display: none;">전체삭제</button>
           </div>
-          <p class="total_volume">첨부파일 <em>2</em>개 (374.73KB)</p>
+          <p class="total_volume">첨부파일 <em>0</em>개 (0.0KB)</p>
         </div>
 
         <div class="file_wrap">
@@ -181,8 +182,8 @@
               <th class="text-right">용량</th>
               <th></th>
             </thead>
-            <tbody>
-              <tr>
+            <tbody id="fileList">
+              <!-- <tr>
                 <td class="col-1"><button>x</button></td>
                 <td><span>아이콘</span>새폴더.zip</td>
                 <td class="text-right">270.86KB</td>
@@ -205,7 +206,7 @@
                 <td><span>아이콘</span>두번째.zip</td>
                 <td class="text-right">270.86KB</td>
                 <td></td>
-              </tr>
+              </tr> -->
     
             </tbody>
           </table>
