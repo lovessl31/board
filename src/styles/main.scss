@@ -30,8 +30,8 @@ html,body,button {
 }
 
 #content5 {
-    width: 434px;
-    height: 701px;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
     overflow: hidden;
     background: #fff;
@@ -117,12 +117,9 @@ html,body,button {
 
 .footer_wrap {
     position: fixed;
-    width: 434px;
+    width: 100%;
     height: 54px;
-    bottom: 218px; /* 화면 하단에 고정 */
-    left: 50%;
-    transform: translateX(-50%); /* 가운데 정렬 */
-    background: #F3F3F3;
+    bottom: 0; /* 화면 하단에 고정 */
     z-index: 1000; /* 컨텐츠 위로 표시되도록 설정 */
 }
 
@@ -159,10 +156,8 @@ html,body,button {
 
 .overlay {
     position: absolute; /* 상대적으로 위치 */
-    top: 0;
-    left: 0;
     width: 100vh;
-    height: 100vh; /* 부모의 높이(701px)만큼 */
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 1000;
     display: none;
@@ -434,7 +429,7 @@ html,body,button {
 }
 
 .feed_img_wrap {
-    width: 385px;
+    min-width: 150px;
     height: 172px;
     background: #b9d2f0;
     border-radius: 10px;
@@ -479,6 +474,13 @@ html,body,button {
     grid-template-columns: repeat(2, 1fr); /* 한 줄에 두 개의 칼럼 */
     gap: 10px; /* 아이템 간의 간격 설정 */
     padding: 10px;
+}
+
+/* 화면이 768px 이상일 때 한 줄에 세 개의 칼럼 */
+@media (min-width: 768px) {
+    .album_container {
+        grid-template-columns: repeat(3, 1fr); /* 한 줄에 세 개의 칼럼 */
+    }
 }
 
 .album_item {
@@ -554,8 +556,8 @@ html,body,button {
 
 .write_pop {
     position: fixed;
-    right: 40%;
-    bottom: 32%;
+    right: 15px;
+    bottom: 70px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
     width: 42px;
     height: 42px;
@@ -583,7 +585,7 @@ html,body,button {
 }
 
 .write_top {
-    width: 434px;
+    width: 100%;
     position: fixed;
     top: 0;
     display: flex;
@@ -607,7 +609,7 @@ html,body,button {
 
 .post_title {
     margin-top: 54px;
-    padding: 20px 15px;
+    padding: 20px 10px 15px 15px;
 }
 
 .post_title button {
@@ -688,8 +690,13 @@ html,body,button {
 
 /* 파일첨부 */
 
+
+.file_attach {
+    padding: 0px 10px 10px 10px;
+}
+
 .attach_title {
-    width: 95%;
+    width: 100%;
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -771,12 +778,21 @@ html,body,button {
 
 /* 댓글 */
 
+
+.deleted_comment, .deleted_reply {
+    margin-left: 0 !important;
+}
+
+.reply_container {
+    width: 100%;
+    display: block; /* 각 댓글이 한 줄에 하나씩 나오도록 */
+}
+
 .cmt_item {
     display: flex;
     border-bottom: 1px solid #F4F4F4;
     padding: 20px 15px;
     align-items: flex-start;
-    
 }
 
 .cmt_section {
@@ -930,6 +946,52 @@ html,body,button {
 }
 
 
+/* 댓글 수정창 */
+
+.edit_form {
+    width: 424px;
+    margin: 10px !important;
+    
+}
+
+.edit_form textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 15px;
+    resize: none; /* 사용자가 크기를 조정하지 못하도록 설정 */
+    overflow: hidden; 
+    box-sizing: border-box; 
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.edit_form textarea:focus {
+    outline: none; /* 기본 outline(외곽선) 제거 */
+}
+
+.edit_form button {
+    border: none;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    margin-top: 4px;
+}
+
+#saveEditBtn {
+    background-color: #1C9DEA;
+    color: #fff;
+}
+
+#cancelEditBtn {
+    background-color: #f3f3f3;
+}
+
+.file_edit_bottom {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* 댓글 작성창 */
 
@@ -1019,16 +1081,128 @@ html,body,button {
     align-items: center;
 }
 
+/* 댓글 수정창 */
+
+
+.cmt_write_wrap {
+    padding: 20px 15px;
+}
+
+.modify_write {
+    width: 100%;
+    border: 1px solid #EDEDED;
+    margin: 0px !important;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.modify_textarea textarea {
+    width: 100%;
+    min-height: 80px; /* 최소 높이 설정 */
+    border: none;
+    padding: 15px;
+    resize: none; /* 사용자가 크기를 조정하지 못하도록 설정 */
+    overflow: hidden; 
+    box-sizing: border-box; 
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.modify_textarea textarea:focus {
+    outline: none; /* 기본 outline(외곽선) 제거 */
+    border: none; /* border를 없앰 */
+}
+
+.modify_textarea textarea::placeholder {
+    font-size: 14px;
+    color: #A9A9A9;
+}
+
+.modify_cmt_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 10px 10px;
+}
+
+.mcmt_pic_wrap {
+    display: flex;
+    align-items: center;
+
+    border: none;
+    background: transparent;
+}
+
+
+.cmt_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 10px 10px;
+    // border-top: 1px solid #EDEDED;
+}
+
+.cmt_pic_wrap {
+    display: flex;
+    align-items: center;
+
+    border: none;
+    background: transparent;
+}
+
+.cmt_reg span {
+    color: #a5a5a5;
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+.cmt_reg button {
+    border: none;
+    background: #1C9DEA;
+    color: #fff;
+    border-radius: 3px;
+    padding: 8px 10px;
+    font-size: 12px;
+}
+
+.reply_mention {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    border-bottom: 1px solid #EDEDED;
+    position: relative;
+    padding: 10px 0px;
+}
+
+.reply_mention p {
+    font-weight: 700;
+    font-size: 12px;
+    margin: 0 auto; /* p 요소를 가로로 중앙 정렬 */
+}
+
+.reply_mention button {
+    position: absolute;
+    left: 0; /* 버튼을 왼쪽으로 고정 */
+    border: none;
+    background: transparent;
+    margin-left: 10px;
+
+    display: flex;
+    align-items: center;
+}
+
 
 /* 댓글 메뉴 */
 
 .cmt_menu {
     position: fixed;
-    bottom: 270px; /* 화면 하단에 고정 */
+    bottom: 10px; /* 화면 하단에 고정 */
     left: 50%;
     transform: translateX(-50%); /* 가운데 정렬 */
     z-index: 1000; /* 컨텐츠 위로 표시되도록 설정 */
-    padding-right: 15px; /* 스크롤바 너비만큼의 패딩 추가 */
+    // padding-right: 15px; /* 스크롤바 너비만큼의 패딩 추가 */
 }
 
 .cmt_menu_wrap {
@@ -1134,6 +1308,7 @@ html,body,button {
 
 
 .module {
+    width: 100%;
     display: flex;
     align-items: center;
   }
@@ -1163,7 +1338,7 @@ html,body,button {
   }
   
   .module-wrap input[type="text"] {
-    max-width: 210px;
+    width: 100%;
     height: 40px;
   }
   
@@ -1490,4 +1665,74 @@ html,body,button {
 .file-icon {
     width: 18px; /* 아이콘 크기 조정 */
     height: auto;
+}
+
+
+
+/* 푸터 */
+
+
+.footer_wrap {
+  padding: 1em;
+  transition: 1s;
+  width: 100%;
+  background: #fbfbfb;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.footer_wrap.on {
+  display: none;
+}
+
+.footer_wrap ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 95%;
+  text-align: center;
+  margin: 0 2.5%;
+}
+
+.footer_wrap ul li {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+}
+
+.footer_wrap ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.footer_wrap ul li img {
+  width: 25px;
+  margin-top: 5px;
+  filter: invert(91%) sepia(0%) saturate(0%) hue-rotate(213deg) brightness(90%) contrast(84%);
+}
+
+.footer_wrap ul li:first-child img {
+  transform: scaleX(-1);
+}
+
+.footer_wrap ul li a:hover img {
+  margin-top: 3px;
+  margin-left: 3px;
+  filter: invert(39%) sepia(0%) saturate(1993%) hue-rotate(138deg) brightness(103%) contrast(96%);
+}
+
+.footer_wrap ul li a:active img {
+  margin-top: 3px;
+  margin-left: 3px;
+  filter: invert(72%) sepia(68%) saturate(5130%) hue-rotate(161deg) brightness(89%) contrast(82%);
+}
+
+.footer_wrap ul li a.active img {
+  filter: invert(72%) sepia(68%) saturate(5130%) hue-rotate(161deg) brightness(89%) contrast(82%);
 }

@@ -31,5 +31,8 @@
     "sass-loader": "^16.0.1",
     "summernote": "^0.8.20",
     "webpack": "^5.94.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }

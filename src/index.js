@@ -25,8 +25,15 @@ import axios from 'axios';
 let postsData = []; // 전역 변수로 posts 데이터를 저장할 배열
 let allSubCategories = []; // 전역 변수로 allSubCategories를 저장
 
+
 // 이벤트 및 초기화 설정
 document.addEventListener('DOMContentLoaded', () => {
+
+  const accessToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNTg4NTg2MSwianRpIjoiZjgxOTE1YmMtZDkyZi00ZWQ2LWJkOTYtODVkMWFjMzNkOTNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJ1c2VyX2lkIjoiYWRtaW4yIiwidXNlcl9pZHgiOjIsInVzZXJfbmFtZSI6Ilx1Y2Q1Y1x1YWNlMCBcdWFkMDBcdWI5YWNcdWM3OTAiLCJ1c2VyX2ltZyI6IjAxMDEyMzQ1Njc4IiwiaWRlbnRpZmllciI6IjU0ODU2IiwiY29tX2lkeCI6MSwiY29tcGFueV9uYW1lIjoiXHVjNjI0XHViMjk4XHVjNzQwXHVjMjE4XHVjNjk0XHVjNzdjIn0sIm5iZiI6MTcyNTg4NTg2MSwiZXhwIjoxNzI4NTY0MjYxfQ.Q3U7foMlmiapNhxF85VhKDdcq-kjaymCRMmzKGMN1Ps';
+
+  // accessToken을 로컬 스토리지에 저장
+localStorage.setItem('accessToken', accessToken);
+
 
   // 현재 페이지 URL을 확인
   const currentUrl = window.location.pathname;
@@ -42,13 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  const comBtn = document.getElementById('companyBtn');
+  // const comBtn = document.getElementById('companyBtn');
 
-  comBtn.addEventListener('click', ()=> {
-    window.location.href="/company.html";
-  });
+  // comBtn.addEventListener('click', ()=> {
+  //   window.location.href="/company.html";
+  // });
 
-  const accessToken = localStorage.getItem('accessToken'); // 로컬 스토리지에서 accessToken 가져오기
 
   const axiosConfig = {
     headers: {
